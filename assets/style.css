@@ -32,6 +32,16 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; border-ra
   padding: 76px 48px 32px;
 }
 .profile { position: sticky; top: 64px; align-self: start; }
+.profile-photo {
+  display: block;
+  width: 224px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 9;
+  object-fit: cover;
+  object-position: 70% 35%;
+  margin-bottom: 24px;
+}
 h1 {
   margin: 0 0 16px;
   color: var(--blue);
@@ -86,6 +96,9 @@ h3 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.65; }
 .paper + .paper { margin-top: 28px; }
 .paper h3 { color: var(--green); }
 .coauthors { margin: 7px 0 0; font-style: italic; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.paper-links { display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px; margin: 8px 0 0; font-size: 13px; }
+.paper-links a { display: inline-flex; align-items: baseline; gap: 7px; padding: 4px 0; }
+.draft-date { color: var(--muted); font-size: 12px; }
 .presentations { list-style: none; padding: 0; margin: 0; }
 .presentations li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: baseline; }
 .presentations li + li { margin-top: 23px; }
@@ -104,6 +117,7 @@ footer a { color: var(--muted); text-decoration: none; }
   html { scroll-padding-top: 16px; }
   .layout { display: block; max-width: 600px; padding: 36px 24px 24px; }
   .profile { position: static; margin-bottom: 38px; }
+  .profile-photo { width: 160px; margin-bottom: 20px; }
   h1 { font-size: 29px; margin-bottom: 12px; }
   .cv-link { margin-top: 19px; }
   nav { flex-direction: row; flex-wrap: wrap; column-gap: 22px; row-gap: 0; margin-top: 24px; padding: 13px 0 8px; border-bottom: 1px solid var(--line); }
